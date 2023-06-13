@@ -7,9 +7,9 @@
 <body>
     <h1>saisie d'un nouvelle aeroport</h1>
     <form method="post" action="/SAE203app/traitement/">
-        {% csrf_token %}
-        {{form.as_ul}}
-        <input type="submit" value="envoyez les données"/>
+      {% csrf_token %}
+      {{form.as_ul}}
+      <input type="submit" value="envoyez les données"/>
     </form>
 </body>
 </html>

@@ -10,3 +10,6 @@ class aeroports(models.Model):
     def __str__(self):
         chaine = f"l'aeroport: {self.nom} dans le pays: {self.pays} d'ID: {self.id}"
         return chaine
+
+    def dico(self):
+        return {"nom": self.nom, "pays": self.pays, "id": self.id}

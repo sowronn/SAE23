@@ -8,5 +8,5 @@ class aeroportsForm(ModelForm):
         fields = ('nom', 'pays')
         labels = {
             'nom' : _('Nom'),
-            'pays' : _('Pays')
+            'pays' : _('Pays'),
         }

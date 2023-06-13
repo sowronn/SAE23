@@ -6,11 +6,11 @@
     <title>index</title>
 </head>
 <body>
-    <h1>bienvenue CACA dans la tour de controle</h1>
-    <a href="/SAE203app/ajout"> ajouter un aeroport </a>
+    <h1>bienvenue dans la tour de controle</h1>
+    <a href="/SAE203app/ajout"> ajouté un aeroport </a>
 <ol>
     {%  for l in liste %}
-          <li> {{l}} </li>
+          <li> {{l}} <a href="/SAE203app/update/{{l.id}}"> update </a> </li>
     {% endfor %}
 </ol>
 </body>
