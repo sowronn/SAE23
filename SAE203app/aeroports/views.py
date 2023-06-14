@@ -25,7 +25,7 @@ def traitement(request):
 
 def index(request):
     liste = list(models.aeroports.objects.all())
-    return render(request, "Aeroports/index.html", {"liste": liste})
+    return render(request, "aeroports/index.html", {"liste": liste})
 
 
 def affiche(request, id):
