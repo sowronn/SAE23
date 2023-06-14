@@ -6,7 +6,11 @@
 </head>
 <body>
     <h1>saisie d'un nouvelle aeroport</h1>
-    <form method="post" action="/SAE203app/traitement/">
+      {% if id != '' %}
+        <form method="post" action="/SAE203app/updatetraitement/{{id}}/">
+      {% else %}
+            <form method="post" action="/SAE203app/traitement/">
+      {% endif %}
       {% csrf_token %}
       {{form.as_ul}}
       <input type="submit" value="envoyez les données"/>
