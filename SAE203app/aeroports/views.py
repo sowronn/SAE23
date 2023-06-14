@@ -48,3 +48,9 @@ def updatetraitement(request, id):
         return HttpResponseRedirect("/SAE203app/")
     else:
         return render(request, "aeroports/update.html", {"form": lform, "id": id})
+
+
+def delete(request, id):
+    aeroports = models.aeroports.objects.get(pk=id)
+    aeroports.delete()
+    return HttpResponseRedirect("/SAE203app/")

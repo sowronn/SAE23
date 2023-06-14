@@ -10,7 +10,7 @@
     <a href="/SAE203app/ajout"> ajouté un aeroport </a>
 <ol>
     {%  for l in liste %}
-          <li> {{l}} <a href="/SAE203app/update/{{l.id}}"> update </a> </li>
+          <li> {{l}} <a href="/SAE203app/update/{{l.id}}"> update </a> <a href="/SAE203app/delete/{{l.id}}"> delete </a> </li>
     {% endfor %}
 </ol>
 </body>
