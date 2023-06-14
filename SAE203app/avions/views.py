@@ -30,7 +30,7 @@ def index(request):
 
 def affiche(request, id):
     avions = models.avions.objects.get(pk=id)
-    return render(request,"aeroport/affiche.html",{"avions": avions})
+    return render(request,"avions/affiche.html",{"avions": avions})
 
 
 def update(request, id):

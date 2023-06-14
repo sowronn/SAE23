@@ -32,8 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     ##'aeroports.apps.AeroportsConfig',
-    'avions.apps.AvionsConfig',
-    ##'compagnies.apps.CompagniesConfig',
+    ##'avions.apps.AvionsConfig',
+    'compagnies.apps.CompagniesConfig',
     ##'pistes_atterissage.apps.PistesAtterrissageConfi',
     ##'types_avions.apps.TypesAvionsConfig',
     ##'vols.apps.VolsConfig',
