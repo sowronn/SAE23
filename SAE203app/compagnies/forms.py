@@ -8,6 +8,6 @@ class compagniesForm(ModelForm):
         fields = ('nom', 'description', 'paysderatachement')
         labels = {
             'nom': _('Nom'),
-            'description': _('description'),
-            'paysderatachement': _('paysderatachement'),
+            'description': _('Description'),
+            'paysderatachement': _('Paysderatachement'),
         }

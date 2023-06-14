@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     ##path('SAE203app/', include('aeroports.urls')),
     ##path('SAE203app/', include('avions.urls')),
-    path('SAE203app/', include('compagnies.urls')),
+    ##path('SAE203app/', include('compagnies.urls')),
+    path('SAE203app/', include('pistes.urls')),
 
 ]

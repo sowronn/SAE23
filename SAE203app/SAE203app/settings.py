@@ -33,8 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     ##'aeroports.apps.AeroportsConfig',
     ##'avions.apps.AvionsConfig',
-    'compagnies.apps.CompagniesConfig',
-    ##'pistes_atterissage.apps.PistesAtterrissageConfi',
+    ##'compagnies.apps.CompagniesConfig',
+    'pistes.apps.PistesConfig',
     ##'types_avions.apps.TypesAvionsConfig',
     ##'vols.apps.VolsConfig',
     'django.contrib.admin',
