@@ -4,7 +4,8 @@ Pistes
 {% endblock %}
 
 {% block title2 %}
-Liste des Pistes
+Liste des Pistes d'atterissage
+
 {% endblock %}
 
 {% block article1 %}
@@ -12,9 +13,9 @@ Liste des Pistes
     {% for pistes in liste %}
         <li class="indexaff2"> <div class="listeindex"> {{pistes}} </div>
             <article class="indexaff">
-            <a class="boutons" href="/updatepistes/{{pistes.id}}/" style="color:#000000"> Update </a>
-            <a class="boutons" href="/affichepistes/{{pistes.id}}/" style="color:#000000"> Other informations </a>
-            <a class="boutons" href="/deletepistes/{{pistes.id}}/" style="color:#000000"> Delete </a>
+            <a class="boutons" href="/updatepistes/{{pistes.id}}/" style="color:#000000"> mise a jours </a>
+            <a class="boutons" href="/affichepistes/{{pistes.id}}/" style="color:#000000"> plus d'informations </a>
+            <a class="boutons" href="/deletepistes/{{pistes.id}}/" style="color:#000000"> supprimer </a>
             </article>
         </li>
     {% endfor %}

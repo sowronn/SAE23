@@ -1,10 +1,10 @@
 {% extends 'tourdecontrole/main.html' %}
 {% block title %}
-Avions
+avions
 {% endblock %}
 
 {% block title2 %}
-Liste des Avions
+Liste des avions
 {% endblock %}
 
 {% block article1 %}
@@ -12,9 +12,9 @@ Liste des Avions
     {% for avions in liste %}
     <li class="indexaff2"> <div class="listeindex"> {{avions}} </div>
         <article class="indexaff">
-            <a class="boutons" href="/updateavions/{{avions.id}}/" style="color:#000000"> Update </a>
-            <a class="boutons" href="/afficheavions/{{avions.id}}/" style="color:#000000"> Other informations </a>
-            <a class="boutons" href="/deleteavions/{{avions.id}}/" style="color:#000000"> Delete </a>
+            <a class="boutons" href="/updateavions/{{avions.id}}/" style="color:#000000"> mise a jour </a>
+            <a class="boutons" href="/afficheavions/{{avions.id}}/" style="color:#000000"> plus d'informations </a>
+            <a class="boutons" href="/deleteavions/{{avions.id}}/" style="color:#000000"> supprimer </a>
         </article>
     </li>
     {% endfor %}

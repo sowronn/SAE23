@@ -12,9 +12,9 @@ Liste des Compagnies
     {% for compagnies in liste %}
     <li class="indexaff2"> <div class="listeindex">{{compagnies}} </div>
             <article class="indexaff">
-        <a class="boutons" href="/updatecompagnies/{{compagnies.id}}/" style="color:#000000"> Update </a>
-        <a class="boutons" href="/affichecompagnies/{{compagnies.id}}/" style="color:#000000"> Other informations </a>
-        <a class="boutons" href="/deletecompagnies/{{compagnies.id}}/" style="color:#000000"> Delete </a>
+        <a class="boutons" href="/updatecompagnies/{{compagnies.id}}/" style="color:#000000"> mise a jours </a>
+        <a class="boutons" href="/affichecompagnies/{{compagnies.id}}/" style="color:#000000"> plus d'informations </a>
+        <a class="boutons" href="/deletecompagnies/{{compagnies.id}}/" style="color:#000000"> supprimer </a>
             </article>
     </li>
     {% endfor %}
