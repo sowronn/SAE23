@@ -1,0 +1,21 @@
+{% extends 'tourdecontrole/main.html' %}
+{% block title %}
+Flights
+{% endblock %}
+
+{% block title2 %}
+Add a new Flights
+{% endblock %}
+
+{% block article1 %}
+    <article>
+        <form class="formulaire" method="post" action="/traitementvols/">
+    {% csrf_token %}
+    {{form.as_ul}}
+            <br>
+    <input type="submit" value="Send data"/>
+        </form>
+        </form>
+    </article>
+{% endblock %}
+

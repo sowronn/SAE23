@@ -1,0 +1,21 @@
+{% extends 'tourdecontrole/main.html' %}
+{% block title %}
+Palnes Types
+{% endblock %}
+
+{% block title2 %}
+Add an new Planes Types
+{% endblock %}
+
+{% block article1 %}
+    <article>
+        <form class="formulaire" method="post" action="/traitementtypesavions/" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_ul}}
+            <br>
+    <input type="submit" value="Send data"/>
+        </form>
+        </form>
+    </article>
+{% endblock %}
+

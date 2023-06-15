@@ -1,0 +1,21 @@
+{% extends 'tourdecontrole/main.html' %}
+{% block title %}
+Companies
+{% endblock %}
+
+{% block title2 %}
+Add an new Compagny
+{% endblock %}
+
+{% block article1 %}
+    <article>
+        <form class="formulaire" method="post" action="/traitementcompagnies/">
+    {% csrf_token %}
+    {{form.as_ul}}
+            <br>
+    <input type="submit" value="Send data"/>
+        </form>
+        </form>
+    </article>
+{% endblock %}
+

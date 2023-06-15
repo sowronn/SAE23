@@ -1,0 +1,26 @@
+{% extends 'tourdecontrole/main.html' %}
+{% block title %}
+Pistes
+{% endblock %}
+
+{% block title2 %}
+Liste des Pistes
+{% endblock %}
+
+{% block article1 %}
+<ol>
+    {% for pistes in liste %}
+        <li class="indexaff2"> <div class="listeindex"> {{pistes}} </div>
+            <article class="indexaff">
+            <a class="boutons" href="/updatepistes/{{pistes.id}}/" style="color:#000000"> Update </a>
+            <a class="boutons" href="/affichepistes/{{pistes.id}}/" style="color:#000000"> Other informations </a>
+            <a class="boutons" href="/deletepistes/{{pistes.id}}/" style="color:#000000"> Delete </a>
+            </article>
+        </li>
+    {% endfor %}
+</ol>
+{% endblock %}
+
+{% block article2 %}
+
+{% endblock %}

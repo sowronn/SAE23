@@ -1,50 +1,54 @@
 from django.shortcuts import render, HttpResponseRedirect
-from .forms import aeroportsForm
+from . forms import AeroportsForm
 from . import models
 
-# Create your views here.
 
-
-def ajout(request):
+def formulaire(request):
     if request.method == "POST":
-        form = aeroportsForm(request)
-        return render(request, "aeroports/ajout.html", {"form": form})
+        form = AeroportsForm(request)
+        return render(request, "tourdecontrole/aeroport/formulaire.html", {"form": form})
     else:
-        form = aeroportsForm()
-        return render(request, "aeroports/ajout.html", {"form": form})
-
+        form = AeroportsForm()
+        id = ""
+        return render(request, "tourdecontrole/aeroport/formulaire.html", {"form": form, "id": id})
 
 def traitement(request):
-    lform = aeroportsForm(request.POST)
+    lform = AeroportsForm(request.POST)
     if lform.is_valid():
-        aeroports = lform.save()
-        return HttpResponseRedirect("/SAE203app")
+        lform.save()
+        return HttpResponseRedirect('/indexaeroport/')
     else:
-        return render(request, "aeroports/ajout.html", {"form": lform})
+        return render(request, "tourdecontrole/aeroport/formulaire.html", {"form": lform})
 
 
 def index(request):
-    liste = list(models.aeroports.objects.all())
-    return render(request, "Aeroports/index.html", {"liste": liste})
+    liste = list(models.Aeroports.objects.all())
+    return render(request, 'tourdecontrole/aeroport/index.html', {'liste': liste})
 
 
 def affiche(request, id):
-    aeroports = models.aeroports.objects.get(pk=id)
-    return render(request,"aeroport/affiche.html",{"aeroports": aeroports})
+    aeroport = models.Aeroports.objects.get(pk=id)
+    return render(request, 'tourdecontrole/aeroport/affiche.html', {"aeroport": aeroport})
 
 
 def update(request, id):
-    aeroports = models.aeroports.objects.get(pk=id)
-    form = aeroportsForm(aeroports.dico())
-    return render(request, "aeroports/update.html", {"form": form, "id": id})
+    aeroport = models.Aeroports.objects.get(pk=id)
+    form = AeroportsForm(aeroport.dico())
+    return render(request, 'tourdecontrole/aeroport/update.html', {'form': form, 'id': id})
 
 
 def updatetraitement(request, id):
-    lform = aeroportsForm(request.POST)
+    lform = AeroportsForm(request.POST)
     if lform.is_valid():
-        aeroports = lform.save(commit=False)
-        aeroports.id = id
-        aeroports.save()
-        return HttpResponseRedirect("/SAE203app/")
+        aeroport = lform.save(commit=False)
+        aeroport.id = id
+        aeroport.save()
+        return HttpResponseRedirect('/aeroports/indexaeroport/')
     else:
-        return render(request, "aeroports/update.html", {"form": lform, "id": id})
+        return render(request, "aeroport/update.html", {"form": lform, "id": id})
+
+
+def delete(request, id):
+    aeroports = models.Aeroports.objects.get(pk=id)
+    aeroports.delete()
+    return HttpResponseRedirect('/aeroports/indexaeroport/')

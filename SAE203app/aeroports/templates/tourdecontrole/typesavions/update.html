@@ -1,0 +1,20 @@
+{% extends 'tourdecontrole/main.html' %}
+{% block title %}
+Aéroport
+{% endblock %}
+
+{% block title2 %}
+Saisie d'un nouvel Aeroport
+{% endblock %}
+
+{% block article1 %}
+    <article class="article2">
+        <form class="formulaire" method="post" action="/updatetraitementtypesavions/{{id}}/" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_ul}}
+            <br>
+    <input type="submit" value="Send data"/>
+        </form>
+        </form>
+    </article>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'tourdecontrole/main.html' %}
+{% block title %}
+Vols
+{% endblock %}
+
+{% block title2 %}
+Liste des Vols
+{% endblock %}
+
+{% block article1 %}
+<ol>
+    {% for vols in liste %}
+        <li class="indexaff2"> <div class="listeindex"> {{vols}} </div>
+            <article class="indexaff">
+        <a class="boutons" href="/updatevols/{{vols.id}}/" style="color:#000000"> Update </a>
+        <a class="boutons" href="/affichevols/{{vols.id}}/" style="color:#000000"> Other informations </a>
+        <a class="boutons" href="/deletevols/{{vols.id}}/" style="color:#000000"> Delete </a>
+            </article>
+        </li>
+    {% endfor %}
+</ol>
+{% endblock %}
+
+{% block article2 %}
+
+{% endblock %}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{%static '/style.css'%}">
+    <title>{% block title %}
+        mon titre
+        {% endblock %}
+    </title>
+</head>
+<body class="bodyFORM">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<header class="headerFORM">
+		<h1 class="grandtitreFORM">{% block title2 %} {% endblock %}</h1>
+    <article class="boxes">
+		<nav>
+            <ul>
+                <li class="menu"> <a href="#"> Airports</a>
+                    <ul class="sous-menu">
+                        <li><a href="/formulaire/"> Add an Airports</a></li>
+                        <li><a href="/indexaeroport/"> List of Airports</a></li>
+                    </ul>
+                </li>
+                <li class="menu"> <a href="#"> Planes</a>
+                    <ul class="sous-menu">
+                        <li><a href="/formulaireavions/"> Add an Planes</a></li>
+                        <li><a href="/indexavions/"> List of Planes</a></li>
+                    </ul>
+                </li>
+                <li class="menu"> <a href="#"> Companies</a>
+                    <ul class="sous-menu">
+                        <li><a href="/formulairecompagnies/"> Add an Company</a></li>
+                        <li><a href="/indexcompagnies/"> List of Companies</a></li>
+                    </ul>
+                </li>
+                <li class="menu"> <a href="#"> Runway</a>
+                    <ul class="sous-menu">
+                        <li><a href="/formulairepistes/"> Add an Runway</a></li>
+                        <li><a href="/indexpistes/"> List of Runways</a></li>
+                    </ul>
+                </li>
+                <li class="menu"> <a href="#"> Planes Types</a>
+                    <ul class="sous-menu">
+                        <li><a href="/formulairetypesavions/"> Add an Planes Types</a></li>
+                        <li><a href="/indextypesavions/"> List of Planes Types</a></li>
+                    </ul>
+                </li>
+                <li class="menu"> <a href="#"> Flights</a>
+                    <ul class="sous-menu">
+                        <li><a href="/formulairevols/"> Add an Flights</a></li>
+                        <li><a href="/indexvols/"> List of Flights</a></li>
+                    </ul>
+                </li>
+            </ul>
+		</nav>
+    </article>
+</header>
+    <article class="article1">
+    {% block article1 %}
+
+    {% endblock %}
+
+    </article>
+<br>
+
+</body>
+</html>
