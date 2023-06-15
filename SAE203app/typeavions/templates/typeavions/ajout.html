@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formulaire de saisie</title>
+</head>
+<body>
+    <h1>saisie d'un nouveau type d'avion</h1>
+    <form method="post" action="/SAE203app/traitement/">
+      {% csrf_token %}
+      {{form.as_ul}}
+      <input type="submit" value="envoyez les données"/>
+    </form>
+</body>
+</html>
