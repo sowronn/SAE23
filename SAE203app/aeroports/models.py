@@ -8,7 +8,7 @@ class Aeroports(models.Model):
 
 
     def __str__(self):
-        chaine = f"The airport {self.nom} located in {self.pays}, has the ID {self.id}."
+        chaine = f"l'aéroport {self.nom} situé {self.pays}, ayant l'id: {self.id}."
         return chaine
 
     def dico(self):
@@ -21,7 +21,7 @@ class Pistes(models.Model):
     longueur = models.IntegerField(blank = False)
 
     def __str__(self):
-        chaine = f"The runway number {self.numero} of the airport {self.aeroport} has a length of {self.longueur} meters."
+        chaine = f"La piste d'atterissage n° {self.numero} del'aéroport {self.aeroport} a une longueur de  {self.longueur} mètres."
         return chaine
 
     def dico(self):
@@ -34,7 +34,7 @@ class Compagnies(models.Model):
     pays_de_rattachement = models.CharField(max_length=100)
 
     def __str__(self):
-        chaine = f"{self.description}. The country of attachment of the company is {self.pays_de_rattachement}."
+        chaine = f"{self.description}. Le pays rattaché a cette compagnie est {self.pays_de_rattachement}."
         return chaine
 
     def dico(self):
@@ -50,7 +50,7 @@ class Typeavions(models.Model):
 
 
     def __str__(self):
-        chaine = f"The plane {self.model} of the brand {self.marque}, is {self.description}, it needs to land a runway of {self.longueurpistenecessaire} meter long."
+        chaine = f"L'avion {self.model} de la marque {self.marque}, est {self.description}, ayant besoin d'une piste d'une longueur de {self.longueurpistenecessaire} metre de long."
         return chaine
 
     def dico(self):
@@ -64,7 +64,7 @@ class Avions(models.Model):
 
 
     def __str__(self):
-        chaine = f"The plane {self.id} the company {self.compagnies}, is a {self.nom}{self.model}."
+        chaine = f"L'avion {self.id} de la compagnie {self.compagnies}, est un {self.nom}{self.model}."
         return chaine
 
     def dico(self):
@@ -87,7 +87,7 @@ class Vols(models.Model):
 
 
     def __str__(self):
-        chaine = f"Flight number {self.id} with the plane {self.avions} with the pilot {self.pilote}, will take off at {self.heure_de_depart} the {self.date_de_depart} at {self.aeroport_de_depart}. The flight and will arrive at its destination at {self.heure_de_darriver}, the {self.date_de_darriver}, at {self.aeroport_de_darriver}."
+        chaine = f"Le vol numero {self.id} avec l'avion {self.avions}, le pilote {self.pilote}, décollera a {self.heure_de_depart} le {self.date_de_depart} a l'aeroport {self.aeroport_de_depart}. Le vol atterrira a {self.heure_de_darriver}, le {self.date_de_darriver}, a l'aeroport {self.aeroport_de_darriver}."
         return chaine
 
     def dico(self):
