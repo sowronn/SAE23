@@ -51,4 +51,4 @@ def updatetraitement(request, id):
 def delete(request, id):
     aeroports = models.Aeroports.objects.get(pk=id)
     aeroports.delete()
-    return HttpResponseRedirect('/aeroports/indexaeroport/')
+    return HttpResponseRedirect('/aeroport/indexaeroport/')
