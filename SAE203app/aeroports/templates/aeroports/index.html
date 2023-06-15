@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <h1>bienvenue dans la tour de controle</h1>
+    <a href="/SAE203app/ajout"> ajouté un aeroport </a>
+<ol>
+    {%  for l in liste %}
+          <li> {{l}} <a href="/SAE203app/update/{{l.id}}"> update </a> <a href="/SAE203app/delete/{{l.id}}"> delete </a> </li>
+    {% endfor %}
+</ol>
+</body>
+</html>
