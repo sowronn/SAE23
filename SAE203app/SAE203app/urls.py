@@ -23,6 +23,7 @@ urlpatterns = [
     ##path('SAE203app/', include('avions.urls')),
     ##path('SAE203app/', include('compagnies.urls')),
     ##path('SAE203app/', include('pistes.urls')),
-    path('SAE203app/', include('typeavions.urls')),
+    ##path('SAE203app/', include('typeavions.urls')),
+    path('SAE203app/', include('vols.urls')),
 
 ]
