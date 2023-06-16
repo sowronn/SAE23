@@ -2,7 +2,6 @@ from django.db import models
 
 # Create your models here.
 class Aeroports(models.Model):
-    #id = models.IntegerField(blank = False, primary_key=True)
     nom = models.CharField(max_length=100)
     pays = models.CharField(max_length=100)
 
@@ -15,7 +14,6 @@ class Aeroports(models.Model):
         return {"nom":self.nom, "pays":self.pays, "id":self.id}
 
 class Pistes(models.Model):
-    #id = models.IntegerField(blank = False, primary_key=True)
     numero = models.IntegerField(blank = False)
     aeroport = models.CharField(max_length=100)
     longueur = models.IntegerField(blank = False)
@@ -28,7 +26,6 @@ class Pistes(models.Model):
         return {"id":self.id,"numero":self.numero, "aeroport":self.aeroport, "plongueur":self.longueur}
 
 class Compagnies(models.Model):
-    #id = models.IntegerField(blank = False, primary_key=True)
     nom = models.CharField(max_length=100)
     description = models.TextField(null = True, blank = True)
     pays_de_rattachement = models.CharField(max_length=100)
@@ -41,7 +38,6 @@ class Compagnies(models.Model):
         return {"nom":self.nom,"description":self.description, "pays_de_rattachement":self.pays_de_rattachement}
 
 class Typeavions(models.Model):
-    #id = models.IntegerField(blank = False, primary_key=True)
     marque = models.CharField(max_length=100)
     model = models.CharField(max_length=100)
     description = models.TextField(null = True, blank = True)
@@ -57,7 +53,6 @@ class Typeavions(models.Model):
         return {"model":self.model, "marque":self.marque, "description":self.description, "longueurpistenecessaire":self.longueurpistenecessaire}
 
 class Avions(models.Model):
-    #id = models.IntegerField(blank = False, primary_key=True)
     nom = models.CharField(max_length=100)
     compagnies = models.CharField(max_length=100)
     model = models.CharField(max_length=100)
@@ -71,13 +66,9 @@ class Avions(models.Model):
         return {"is":self.id, "nom":self.nom, "compagnies":self.compagnies, "model":self.model}
 
 class Vols(models.Model):
-    #id = models.IntegerField(blank = False, primary_key=True)
-    #avions = models.CharField(max_length=100)
     avions = models.ForeignKey(Avions, on_delete = models.CASCADE)
     pilote = models.CharField(max_length=100)
-    #aeroport_de_depart = models.CharField(max_length=100)
     aeroport_de_depart = models.ForeignKey(Aeroports, on_delete = models.CASCADE, related_name = "Aeroport_Depart")
-    #aeroport_de_darriver = models.CharField(max_length=100)
     aeroport_de_darriver = models.ForeignKey(Aeroports, on_delete = models.CASCADE, related_name = "Aeroport_Arrivee")
     date_de_depart = models.DateField(null=True, blank=True)
     date_de_darriver = models.DateField(null=True, blank=True)
