@@ -52,4 +52,4 @@ def updatetraitement(request, id):
 def delete(request, id):
     pistesatterissage = models.Pistes.objects.get(pk=id)
     pistesatterissage.delete()
-    return HttpResponseRedirect('/aeroports/indexpistes/')
+    return render(request, "tourdecontrole/pistesatterissage/index.html")

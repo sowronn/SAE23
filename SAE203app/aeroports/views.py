@@ -43,12 +43,12 @@ def updatetraitement(request, id):
         aeroport = lform.save(commit=False)
         aeroport.id = id
         aeroport.save()
-        return HttpResponseRedirect('/aeroports/indexaeroport/')
+        return HttpResponseRedirect('/indexaeroport/')
     else:
-        return render(request, "aeroport/update.html", {"form": lform, "id": id})
+        return render(request, "tourdecontrole/aeroport/update.html", {"form": lform, "id": id})
 
 
 def delete(request, id):
     aeroports = models.Aeroports.objects.get(pk=id)
     aeroports.delete()
-    return HttpResponseRedirect('/aeroport/indexaeroport/')
+    return render(request, "tourdecontrole/aeroport/index.html")

@@ -10,46 +10,43 @@
     </title>
 </head>
 <body class="corp">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<header class="headerFORM">
+<header>
 		<h1 class="titre">{% block title2 %} {% endblock %}</h1>
     <article class="boxes">
 		<nav>
             <ul>
-                <li class="menu"> <a href="#">Aéroports</a>
-                    <ul class="sous-menu">
+                <li> <a href="#">Aéroports</a>
+                    <ul>
                         <li><a href="/formulaire/"> Ajouter un aéroport</a></li>
                         <li><a href="/indexaeroport/"> Liste des aéroports</a></li>
                     </ul>
                 </li>
-                <li class="menu"> <a href="#"> Avions</a>
-                    <ul class="sous-menu">
+                <li> <a href="#"> Avions</a>
+                    <ul>
                         <li><a href="/formulaireavions/"> Ajouter un avion</a></li>
                         <li><a href="/indexavions/"> Liste des avions</a></li>
                     </ul>
                 </li>
-                <li class="menu"> <a href="#"> Compagnies</a>
-                    <ul class="sous-menu">
+                <li> <a href="#"> Compagnies</a>
+                    <ul>
                         <li><a href="/formulairecompagnies/"> Ajouter une compagnie</a></li>
                         <li><a href="/indexcompagnies/"> Liste des compagnies</a></li>
                     </ul>
                 </li>
-                <li class="menu"> <a href="#"> Pistes</a>
-                    <ul class="sous-menu">
+                <li> <a href="#"> Pistes</a>
+                    <ul>
                         <li><a href="/formulairepistes/"> Ajouter une piste</a></li>
                         <li><a href="/indexpistes/"> Liste des pistes</a></li>
                     </ul>
                 </li>
-                <li class="menu"> <a href="#"> Types d'avions</a>
-                    <ul class="sous-menu">
+                <li> <a href="#"> Types d'avions</a>
+                    <ul>
                         <li><a href="/formulairetypesavions/"> Ajouter un type d'avion</a></li>
                         <li><a href="/indextypesavions/"> Liste des types d'avions</a></li>
                     </ul>
                 </li>
-                <li class="menu"> <a href="#"> Vols</a>
-                    <ul class="sous-menu">
+                <li> <a href="#"> Vols</a>
+                    <ul>
                         <li><a href="/formulairevols/"> Ajouter un vol</a></li>
                         <li><a href="/indexvols/"> Liste des vols</a></li>
                     </ul>
@@ -58,7 +55,7 @@
 		</nav>
     </article>
 </header>
-    <article class="article1">
+    <article>
     {% block article1 %}
 
     {% endblock %}
